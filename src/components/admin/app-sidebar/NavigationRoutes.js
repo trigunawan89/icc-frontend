@@ -6,8 +6,8 @@ export const navigationRoutes = {
   routes: [
     
     {
-      name: 'dashboard',
-      displayName: 'menu.dashboard',
+      name: 'home',
+      displayName: 'menu.home',
       meta: {
         iconClass: 'glyphicon glyphicon-home',
       },
@@ -21,170 +21,122 @@ export const navigationRoutes = {
       disabled: true,
       children: [
         {
-          name: 'form-elements',
-          displayName: 'menu.formElements',          
+          name: 'travel-medical',
+          displayName: 'menu.travel-medical',
         },
         {
-          name: 'medium-editor',
-          displayName: 'menu.mediumEditor',
+          name: 'travel-security',
+          displayName: 'menu.travel-security',
         },
+        {
+          name: 'travel-hostel',
+          displayName: 'menu.travel-hostel',
+        },
+        {
+          name: 'travel-insurance',
+          displayName: 'menu.travel-insurance',
+        },
+      
       ],
     },
     {
-      name: 'statistics',
-      displayName: 'menu.statistics',
+      name: 'advisory',
+      displayName: 'menu.advisory',
       meta: {
         iconClass: 'glyphicon glyphicon-bullhorn',
       },
       disabled: true,
       children: [
         {
-          name: 'charts',
-          displayName: 'menu.charts',
+          name: 'adv-demo',
+          displayName: 'menu.adv-demo',
         },
         {
-          name: 'progress-bars',
-          displayName: 'menu.progressBars',
+          name: 'adv-security',
+          displayName: 'menu.adv-security',
+        },
+        {
+          name: 'adv-weather',
+          displayName: 'menu.adv-weather',
+        },
+        {
+          name: 'adv-disaster',
+          displayName: 'menu.adv-disaster',
+        },
+        {
+          name: 'adv-traffic',
+          displayName: 'menu.adv-traffic',
+        },
+        {
+          name: 'adv-travel',
+          displayName: 'menu.adv-travel',
+        },
+        {
+          name: 'adv-special',
+          displayName: 'menu.adv-special',
         },
       ],
     },
     {
-      name: 'forms',
-      displayName: 'menu.forms',
+      name: 'guideline',
+      displayName: 'menu.guideline',
       meta: {
         iconClass: 'glyphicon glyphicon-book',
       },
       disabled: true,
       children: [
         {
-          name: 'form-elements',
-          displayName: 'menu.formElements',
+          name: 'guide-bcoc',
+          displayName: 'menu.guide-bcoc',
         },
         {
-          name: 'medium-editor',
-          displayName: 'menu.mediumEditor',
+          name: 'guide-policy',
+          displayName: 'menu.guide-policy',
         },
       ],
     },
     {
-      name: 'tables',
-      displayName: 'menu.tables',
+      name: 'emergency',
+      displayName: 'menu.emergency',
       meta: {
         iconClass: 'glyphicon glyphicon-plus-sign',
       },
       children: [
         {
-          name: 'markup',
-          displayName: 'menu.markupTables',
+          name: 'emergency-airport',
+          displayName: 'menu.emergency-airport',
         },
         {
-          name: 'data',
-          displayName: 'menu.dataTables',
+          name: 'emergency-fire-dept',
+          displayName: 'menu.emergency-fire-dept',
+        },
+        {
+          name: 'emergency-hospital',
+          displayName: 'menu.emergency-hospital',
+        },
+        {
+          name: 'emergency-police',
+          displayName: 'menu.emergency-police',
         },
       ],
     },
     {
-      name: 'ui',
-      displayName: 'menu.uiElements',
+      name: 'tool',
+      displayName: 'menu.tool',
       meta: {
         iconClass: 'glyphicon glyphicon-th-large',
       },
       disabled: true,
       children: [
         {
-          name: 'buttons',
-          displayName: 'menu.buttons',
+          name: 'tool-rm3',
+          displayName: 'menu.tool-rm3',
         },
         {
-          name: 'cards',
-          displayName: 'menu.cards',
+          name: 'tool-gemba',
+          displayName: 'menu.tool-gemba',
         },
-        {
-          name: 'chat',
-          displayName: 'menu.chat',
-        },
-        {
-          name: 'chips',
-          displayName: 'menu.chips',
-        },
-        {
-          name: 'collapses',
-          displayName: 'menu.collapses',
-        },
-        {
-          name: 'colors',
-          displayName: 'menu.colors',
-        },
-        {
-          name: 'color-pickers',
-          displayName: 'menu.colorPickers',
-        },
-        {
-          name: 'file-upload',
-          displayName: 'menu.fileUpload',
-        },
-        {
-          name: 'grid',
-          displayName: 'menu.grid',
-        },
-        {
-          name: 'icon-sets',
-          displayName: 'menu.icons',
-          children: [
-            {
-              displayName: 'concrete',
-              name: 'icon-set',
-            },
-          ],
-        },
-        {
-          name: 'lists',
-          displayName: 'menu.lists',
-        },
-        {
-          name: 'modals',
-          displayName: 'menu.modals',
-        },
-        {
-          name: 'notifications',
-          displayName: 'menu.notifications',
-        },
-        {
-          name: 'popovers',
-          displayName: 'menu.popovers',
-        },
-        {
-          name: 'rating',
-          displayName: 'menu.rating',
-        },
-        {
-          name: 'sliders',
-          displayName: 'menu.sliders',
-        },
-        {
-          name: 'spacing',
-          displayName: 'menu.spacing',
-        },
-        {
-          name: 'spinners',
-          displayName: 'menu.spinners',
-        },
-        {
-          name: 'tabs',
-          displayName: 'menu.tabs',
-        },
-        {
-          name: 'timelines',
-          displayName: 'menu.timelines',
-        },
-        {
-          name: 'tree-view',
-          displayName: 'menu.treeView',
-        },
-        {
-          name: 'typography',
-          displayName: 'menu.typography',
-        },
+        
       ],
     },
     {
@@ -196,44 +148,21 @@ export const navigationRoutes = {
       disabled: true,
       children: [
         {
-          name: 'google-maps',
-          displayName: 'Google Maps',
-        },
-        {
-          name: 'yandex-maps',
-          displayName: 'Yandex Maps',
-        },
-        {
           name: 'leaflet-maps',
           displayName: 'Leaflet Maps',
         },
         {
-          name: 'bubble-maps',
+          name: 'risk-maps',
           displayName: 'Bubble Maps',
-        },
-        {
-          name: 'line-maps',
-          displayName: 'Line Maps',
         },
       ],
     },
     {
-      name: 'pages',
-      displayName: 'menu.pages',
+      name: 'calendar',
+      displayName: 'menu.calendar',
       meta: {
         iconClass: 'glyphicon glyphicon-calendar',
       },
-      disabled: true,
-      children: [
-        {
-          name: 'login',
-          displayName: 'Login/Signup',
-        },
-        {
-          name: '404-pages',
-          displayName: '404 Pages',
-        },
-      ],
     },
     {
       name: 'contact',
@@ -241,17 +170,6 @@ export const navigationRoutes = {
       meta: {
         iconClass: 'glyphicon glyphicon-headphones',
       },
-      disabled: true,
-      children: [
-        {
-          name: 'login',
-          displayName: 'Login/Signup',
-        },
-        {
-          name: '404-pages',
-          displayName: '404 Pages',
-        },
-      ],
     },
   ],
 }

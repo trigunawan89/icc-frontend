@@ -281,7 +281,13 @@
     "indonesian" : "Bahasa"
   },
   "menu": {
-    "travel": "Travel Safety",
+    "travel": "Travel",
+    "travel-medical": "Medical",
+    "travel-security": "Security",
+    "travel-hostel": "Hostel",
+    "travel-insurance": "Insurance",
+    "home": "Home",
+    "advisory": "Advisory",
     "news": "News",
     "auth": "Auth",
     "rating": "Rating",
