@@ -281,6 +281,7 @@
     "indonesian" : "Bahasa"
   },
   "menu": {
+    "guideline":"Guidline",
     "travel": "Travel",
     "travel-medical": "Medical",
     "travel-security": "Security",
