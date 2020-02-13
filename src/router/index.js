@@ -17,7 +17,7 @@ export default new Router({
     ...demoRoutes,
     {
       path: '*',
-      redirect: { name: 'dashboard' },
+      redirect: { name: 'home' },
     },
     {
       path: '/auth',
@@ -76,32 +76,44 @@ export default new Router({
       component: AppLayout,
       children: [
         {
-          name: 'dashboard',
-          path: 'dashboard',
-          component: () => import('../components/dashboard/Dashboard.vue'),
+          name: 'home',
+          path: 'home',
+          component: () => import('../components/home/Home.vue'),
           default: true,
         },
         {
-          name: 'statistics',
-          path: 'statistics',
+          name: 'profile',
+          path: 'profile',
+          component: () => import('../components/profile/Profile.vue'),
+        },
+        {
+          name: 'dashboard',
+          path: 'dashboard',
+          component: () => import('../components/dashboard/Dashboard.vue'),
+          // default: true,
+        },
+        {
+          name: 'travel',
+          path: 'travel',
           component: EmptyParentComponent,
           children: [
             {
-              name: 'charts',
-              path: 'charts',
-              component: () => import('../components/statistics/charts/Charts.vue'),
+              name: 'travel-global',
+              path: 'travel-global',
+              component: () => import('../components/travel-global/TravelGlobal.vue'),
               meta: {
                 wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Charts',
               },
             },
             {
-              name: 'progress-bars',
-              path: 'progress-bars',
-              component: () => import('../components/statistics/progress-bars/ProgressBars.vue'),
+              name: 'travel-region',
+              path: 'travel-region',
+              component: () => import('../components/travel-region/TravelRegion.vue'),
               meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Progress-Bars',
+                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Charts',
               },
             },
+
           ],
         },
         {

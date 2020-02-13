@@ -4,7 +4,7 @@ export const navigationRoutes = {
     displayName: 'navigationRoutes.home',
   },
   routes: [
-    
+
     {
       name: 'home',
       displayName: 'menu.home',
@@ -21,22 +21,18 @@ export const navigationRoutes = {
       disabled: true,
       children: [
         {
-          name: 'travel-medical',
-          displayName: 'menu.travel-medical',
+          name: 'travel-global',
+          displayName: 'menu.travel-global',
         },
         {
-          name: 'travel-security',
-          displayName: 'menu.travel-security',
+          name: 'travel-region',
+          displayName: 'menu.travel-region',
         },
         {
-          name: 'travel-hostel',
-          displayName: 'menu.travel-hostel',
+          name: 'travel-advice',
+          displayName: 'menu.travel-advice',
         },
-        {
-          name: 'travel-insurance',
-          displayName: 'menu.travel-insurance',
-        },
-      
+
       ],
     },
     {
@@ -136,24 +132,20 @@ export const navigationRoutes = {
           name: 'tool-gemba',
           displayName: 'menu.tool-gemba',
         },
-        
+
       ],
     },
     {
-      name: 'maps',
-      displayName: 'menu.maps',
+      name: 'map',
+      displayName: 'menu.map',
       meta: {
         iconClass: 'glyphicon glyphicon-map-marker',
       },
       disabled: true,
       children: [
         {
-          name: 'leaflet-maps',
-          displayName: 'Leaflet Maps',
-        },
-        {
-          name: 'risk-maps',
-          displayName: 'Bubble Maps',
+          name: 'map-risk',
+          displayName: 'Risk Map',
         },
       ],
     },

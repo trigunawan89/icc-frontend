@@ -26,7 +26,7 @@
           <!-- <va-icon-vuestic /> -->
         </router-link>
       </div>
-    
+
       <app-navbar-actions
         class="app-navbar__actions md5 lg4"
         :user-name="userName"
@@ -69,7 +69,7 @@ export default {
   },
   data () {
     return {
-      userName: 'Vasili S',
+      userName: 'Tri Gunawan',
     }
   },
   computed: {

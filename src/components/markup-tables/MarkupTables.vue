@@ -58,6 +58,7 @@
 import data from './data.json'
 
 export default {
+  name: 'markup-tables',
   data () {
     return {
       users: data.slice(0, 8),
