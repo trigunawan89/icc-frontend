@@ -9,7 +9,11 @@
             :title="$t('cards.title.withImage')"
           >
             {{ $t('cards.contentText') }}
+            <va-button :to="{ name: 'post' }">
+              Read More
+            </va-button>
           </va-card>
+
         </div>
 
       </template>

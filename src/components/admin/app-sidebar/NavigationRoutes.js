@@ -41,37 +41,7 @@ export const navigationRoutes = {
       meta: {
         iconClass: 'glyphicon glyphicon-bullhorn',
       },
-      disabled: true,
-      children: [
-        {
-          name: 'adv-demo',
-          displayName: 'menu.adv-demo',
-        },
-        {
-          name: 'adv-security',
-          displayName: 'menu.adv-security',
-        },
-        {
-          name: 'adv-weather',
-          displayName: 'menu.adv-weather',
-        },
-        {
-          name: 'adv-disaster',
-          displayName: 'menu.adv-disaster',
-        },
-        {
-          name: 'adv-traffic',
-          displayName: 'menu.adv-traffic',
-        },
-        {
-          name: 'adv-travel',
-          displayName: 'menu.adv-travel',
-        },
-        {
-          name: 'adv-special',
-          displayName: 'menu.adv-special',
-        },
-      ],
+
     },
     {
       name: 'guideline',
@@ -79,17 +49,6 @@ export const navigationRoutes = {
       meta: {
         iconClass: 'glyphicon glyphicon-book',
       },
-      disabled: true,
-      children: [
-        {
-          name: 'guide-bcoc',
-          displayName: 'menu.guide-bcoc',
-        },
-        {
-          name: 'guide-policy',
-          displayName: 'menu.guide-policy',
-        },
-      ],
     },
     {
       name: 'emergency',
@@ -97,43 +56,6 @@ export const navigationRoutes = {
       meta: {
         iconClass: 'glyphicon glyphicon-plus-sign',
       },
-      children: [
-        {
-          name: 'emergency-airport',
-          displayName: 'menu.emergency-airport',
-        },
-        {
-          name: 'emergency-fire-dept',
-          displayName: 'menu.emergency-fire-dept',
-        },
-        {
-          name: 'emergency-hospital',
-          displayName: 'menu.emergency-hospital',
-        },
-        {
-          name: 'emergency-police',
-          displayName: 'menu.emergency-police',
-        },
-      ],
-    },
-    {
-      name: 'tool',
-      displayName: 'menu.tool',
-      meta: {
-        iconClass: 'glyphicon glyphicon-th-large',
-      },
-      disabled: true,
-      children: [
-        {
-          name: 'tool-rm3',
-          displayName: 'menu.tool-rm3',
-        },
-        {
-          name: 'tool-gemba',
-          displayName: 'menu.tool-gemba',
-        },
-
-      ],
     },
     {
       name: 'map',
@@ -141,13 +63,6 @@ export const navigationRoutes = {
       meta: {
         iconClass: 'glyphicon glyphicon-map-marker',
       },
-      disabled: true,
-      children: [
-        {
-          name: 'map-risk',
-          displayName: 'Risk Map',
-        },
-      ],
     },
     {
       name: 'calendar',
@@ -157,7 +72,7 @@ export const navigationRoutes = {
       },
     },
     {
-      name: 'contact',
+      name: 'contact-us',
       displayName: 'menu.contact',
       meta: {
         iconClass: 'glyphicon glyphicon-headphones',

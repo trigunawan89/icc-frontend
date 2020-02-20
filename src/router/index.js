@@ -113,289 +113,66 @@ export default new Router({
                 wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Charts',
               },
             },
+            {
+              name: 'travel-advice',
+              path: 'travel-advice',
+              component: () => import('../components/travel-advice/TravelAdvice.vue'),
+              meta: {
+                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Charts',
+              },
+            },
 
           ],
         },
         {
-          name: 'forms',
-          path: 'forms',
-          component: EmptyParentComponent,
-          children: [
-            {
-              name: 'form-elements',
-              path: 'form-elements',
-              component: () => import('../components/forms/form-elements/FormElements.vue'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/inputs',
-              },
-            },
-            {
-              name: 'medium-editor',
-              path: 'medium-editor',
-              component: () => import('../components/forms/medium-editor/MediumEditor.vue'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Medium-Editor',
-              },
-            },
-          ],
+          name: 'advisory',
+          path: 'advisory',
+          component: () => import('../components/advisory/Advisory.vue'),
+          // default: true,
         },
         {
-          name: 'tables',
-          path: 'tables',
-          component: EmptyParentComponent,
-          children: [
-            {
-              name: 'markup',
-              path: 'markup',
-              component: () => import('../components/markup-tables/MarkupTables.vue'),
-              wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Tables', // TODO Update docs
-            },
-            {
-              name: 'data',
-              path: 'data',
-              component: () => import('../components/data-tables/DataTables.vue'),
-              wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Tables', // TODO Add docs
-            },
-          ],
+          name: 'guideline',
+          path: 'guideline',
+          component: () => import('../components/guideline/Guideline.vue'),
+          // default: true,
         },
         {
-          name: 'ui',
-          path: 'ui',
-          component: EmptyParentComponent,
-          children: [
-            {
-              name: 'typography',
-              path: 'typography',
-              component: () => import('../components/ui/typography/Typography.vue'),
-            },
-            {
-              name: 'buttons',
-              path: 'buttons',
-              component: () => import('../components/ui/buttons/Buttons'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Buttons',
-              },
-            },
-            {
-              name: 'rating',
-              path: 'rating',
-              component: () => import('../components/ui/rating/Rating'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Rating',
-              },
-            },
-            {
-              name: 'color-pickers',
-              path: 'color-pickers',
-              component: () => import('../components/ui/color-pickers/ColorPickers'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Color-Pickers',
-              },
-            },
-            {
-              name: 'timelines',
-              path: 'timelines',
-              component: () => import('../components/ui/timelines/Timelines'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Timelines',
-              },
-            },
-            {
-              name: 'notifications',
-              path: 'notifications',
-              component: () => import('../components/ui/notifications/Notifications'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Notifications',
-              },
-            },
-            {
-              path: 'icons',
-              component: () => import('../components/ui/icons/Icons'),
-              children: [
-                {
-                  name: 'icon-sets',
-                  path: '', // Default route
-                  component: () => import('../components/ui/icons/SetsList'),
-                  meta: {
-                    wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Icons',
-                  },
-                },
-                {
-                  name: 'icon-set',
-                  path: ':name',
-                  component: () => import('../components/ui/icons/IconSet'),
-                  props: true,
-                  meta: {
-                    wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Icons',
-                  },
-                },
-              ],
-            },
-            {
-              name: 'spinners',
-              path: 'spinners',
-              component: () => import('../components/ui/spinners/Spinners'),
-            },
-            {
-              name: 'grid',
-              path: 'grid',
-              component: () => import('../components/ui/grid/Grid'),
-            },
-            {
-              name: 'modals',
-              path: 'modals',
-              component: () => import('../components/ui/modals/Modals'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Modals',
-              },
-            },
-            {
-              name: 'cards',
-              path: 'cards',
-              component: () => import('../components/ui/cards/Cards'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Cards',
-              },
-            },
-            {
-              name: 'file-upload',
-              path: 'file-upload',
-              component: () => import('../components/ui/file-upload/FileUpload'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/File-Upload',
-              },
-            },
-            {
-              name: 'chips',
-              path: 'chips',
-              component: () => import('../components/ui/chips/Chips'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Chips',
-              },
-            },
-            {
-              name: 'tree-view',
-              path: 'tree-view',
-              component: () => import('../components/ui/tree-view/TreeView'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Tree-view',
-              },
-            },
-            {
-              name: 'collapses',
-              path: 'collapses',
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Collapse',
-              },
-              component: () => import('../components/ui/collapse/Collapses'),
-            },
-            {
-              name: 'colors',
-              path: 'colors',
-              component: () => import('../components/ui/colors/Colors'),
-            },
-            {
-              name: 'spacing',
-              path: 'spacing',
-              component: () => import('../components/ui/spacing/Spacing'),
-            },
-            {
-              name: 'sliders',
-              path: 'sliders',
-              component: () => import('../components/ui/sliders/Sliders'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Sliders',
-              },
-            },
-            {
-              name: 'popovers',
-              path: 'popovers',
-              component: () => import('../components/ui/popovers/Popovers'),
-            },
-            {
-              name: 'chat',
-              path: 'chatPage',
-              component: () => import('../components/ui/chat/ChatPage'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Chat',
-              },
-            },
-            {
-              name: 'tabs',
-              path: 'tabs',
-              component: () => import('../components/ui/tabs/Tabs'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Tabs',
-              },
-            },
-            {
-              name: 'lists',
-              path: 'lists',
-              component: () => import('../components/lists/Lists.vue'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Lists',
-              },
-            },
-          ],
+          name: 'emergency',
+          path: 'emergency',
+          component: () => import('../components/emergency/Emergency.vue'),
+          // default: true,
         },
         {
-          name: 'maps',
-          path: 'maps',
-          component: EmptyParentComponent,
-          children: [
-            {
-              name: 'google-maps',
-              path: 'google-maps',
-              component: () => import('../components/maps/google-maps/GoogleMapsPage'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
-              },
-            },
-            {
-              name: 'yandex-maps',
-              path: 'yandex-maps',
-              component: () => import('../components/maps/yandex-maps/YandexMapsPage'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
-              },
-            },
-            {
-              name: 'leaflet-maps',
-              path: 'leaflet-maps',
-              component: () => import('../components/maps/leaflet-maps/LeafletMapsPage'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
-              },
-            },
-            {
-              name: 'bubble-maps',
-              path: 'bubble-maps',
-              component: () => import('../components/maps/bubble-maps/BubbleMapsPage'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
-              },
-            },
-            {
-              name: 'line-maps',
-              path: 'line-maps',
-              component: () => import('../components/maps/line-maps/LineMapsPage'),
-              meta: {
-                wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
-              },
-            },
-          ],
+          name: 'map',
+          path: 'map',
+          component: () => import('../components/maps/leaflet-maps/LeafletMapsPage'),
+          meta: {
+            wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
+          },
         },
         {
-          name: 'pages',
-          path: 'pages',
-          component: EmptyParentComponent,
-          children: [
-            {
-              name: '404-pages',
-              path: '404-pages',
-              component: () => import('../components/pages/404-pages/404PagesPage'),
-            },
-          ],
+          name: 'calendar',
+          path: 'calendar',
+          component: () => import('../components/calendar/Calendar'),
+          meta: {
+            wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
+          },
+        },
+        {
+          name: 'contact-us',
+          path: 'contact-us',
+          component: () => import('../components/contact-us/ContactUs'),
+          meta: {
+            wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
+          },
+        },
+        {
+          name: 'post',
+          path: 'post',
+          component: () => import('../components/post/Post'),
+          meta: {
+            wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Maps',
+          },
         },
       ],
     },

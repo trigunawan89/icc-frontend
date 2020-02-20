@@ -14,19 +14,12 @@
 
       <div class="flex xs12 md3 offset--md3">
         <va-select
-          v-model="perRegion"
-          :label="$t('tables.perPage')"
-          :options="perPageOptions"
-          noClear
-        />
-        <va-select
           v-model="perPage"
           :label="$t('tables.perPage')"
           :options="perPageOptions"
           noClear
         />
       </div>
-
     </div>
 
     <va-data-table
