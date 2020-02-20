@@ -24,10 +24,13 @@
         Show More
       </va-button>
     </va-inner-loading>
+    <pre> {{ info.items[0].title }} </pre>
+
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'cards',
   data () {
@@ -35,7 +38,12 @@ export default {
       listLoops: 1,
       counter: 1,
       isLoading: false,
+      pages: [],
+      info: null,
     }
+  },
+  mounted () {
+    this.load();
   },
   methods: {
     addCards () {
@@ -45,6 +53,12 @@ export default {
         ++this.listLoops
       }, 1000)
     },
+    load(){
+      axios
+      .get('http://127.0.0.1:8000/api/v2/pages/')
+      .then(response => (this.info = response.data))
+      .catch(error => console.log(error))
+    }
   },
 }
 </script>
