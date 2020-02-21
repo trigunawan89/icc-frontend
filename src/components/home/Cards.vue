@@ -2,18 +2,18 @@
   <div class="cards">
     <div class="cards-container row d-flex wrap align--start">
       <!-- eslint-disable vue/valid-v-for -->
-      <template v-for="loop in listLoops">
-        <div class="flex xs12 sm6 lg4 xl6" :key="loop + '-5'">
+      <template v-for="page in pages">
+        <div class="flex xs12 sm6 lg4 xl6" :key="page + '-5'">
           <va-card
             image="https://picsum.photos/300/200/?image=1043"
-            :title="$t('cards.title.withImage')"
+            :title="page.title_id"
           >
-            {{ $t('cards.contentText') }}
+           <span v-html="page.body_id"> </span>
             <va-button :to="{ name: 'post' }">
               Read More
             </va-button>
           </va-card>
-
+          {{ pages }}
         </div>
 
       </template>
@@ -24,7 +24,6 @@
         Show More
       </va-button>
     </va-inner-loading>
-    <pre> {{ info.items[0].title }} </pre>
 
   </div>
 </template>
@@ -43,7 +42,7 @@ export default {
     }
   },
   mounted () {
-    this.load();
+    this.load()
   },
   methods: {
     addCards () {
@@ -53,12 +52,12 @@ export default {
         ++this.listLoops
       }, 1000)
     },
-    load(){
+    load () {
       axios
-      .get('http://127.0.0.1:8000/api/v2/pages/')
-      .then(response => (this.info = response.data))
-      .catch(error => console.log(error))
-    }
+        .get('http://127.0.0.1:8000/api/v2/pages/?type=advisory.AdvisoryPage&fields=date,categories,title,title_id,feed_image,body_en,body_id')
+        .then(response => (this.pages = response.data.items))
+        .catch(error => console.log(error))
+    },
   },
 }
 </script>
